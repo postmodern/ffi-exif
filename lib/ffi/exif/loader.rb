@@ -3,7 +3,7 @@ require 'ffi/exif/data'
 
 module FFI
   module EXIF
-    class Loader < FFI::ManagedStruct
+    class Loader
 
       include Enumerable
 
@@ -12,16 +12,6 @@ module FFI
       #
       def initialize
         @ptr = EXIF.exif_loader_new
-      end
-
-      #
-      # Unreferences and released a loader.
-      #
-      # @param [Loader] loader
-      #   The loader to release.
-      #
-      def self.release(loader)
-        EXIF.exif_loader_unref(loader)
       end
 
       #
@@ -98,6 +88,14 @@ module FFI
 
           yield Data.new(data)
         end
+      end
+
+      #
+      # Unreferences and close the loader.
+      #
+      def close
+        EXIF.exif_loader_unref(self)
+        return nil
       end
 
       #

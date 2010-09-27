@@ -59,7 +59,7 @@ module FFI
     attach_function :exif_entry_free, [:pointer], :void
     attach_function :exif_entry_initialize, [:pointer, :exif_tag], :void
     attach_function :exif_entry_fix, [:pointer], :void
-    attach_function :exif_entry_get_value, [:pointer, :pointer, :uint], :string
+    attach_function :exif_entry_get_value, [:pointer, :pointer, :uint], :pointer
     attach_function :exif_entry_dump, [:pointer, :uint], :void
 
     attach_function :exif_tag_from_name, [:string], :exif_tag
@@ -80,8 +80,8 @@ module FFI
     attach_function :exif_mnote_data_save, [:pointer, :pointer, :pointer], :void
     attach_function :exif_mnote_data_count, [:pointer], :uint
     attach_function :exif_mnote_data_get_id, [:pointer, :uint], :uint
-    attach_function :exif_mnote_data_get_name, [:pointer, :uint], :uint
-    attach_function :exif_mnote_data_get_title, [:pointer, :uint], :uint
+    attach_function :exif_mnote_data_get_name, [:pointer, :uint], :string
+    attach_function :exif_mnote_data_get_title, [:pointer, :uint], :string
     attach_function :exif_mnote_data_get_description, [:pointer, :uint], :string
     attach_function :exif_mnote_data_get_value, [:pointer, :uint, :pointer, :uint], :pointer
     attach_function :exif_mnote_data_log, [:pointer, :pointer], :void
