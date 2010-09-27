@@ -3,7 +3,7 @@ require 'ffi/exif/data'
 
 module FFI
   module EXIF
-    class Loader
+    class Loader < FFI::ManagedStruct
 
       include Enumerable
 
