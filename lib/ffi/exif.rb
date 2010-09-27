@@ -1,0 +1,7 @@
+require 'ffi/exif/types'
+require 'ffi/exif/exif'
+require 'ffi/exif/content'
+require 'ffi/exif/data'
+require 'ffi/exif/entry'
+require 'ffi/exif/rational'
+require 'ffi/exif/srational'
