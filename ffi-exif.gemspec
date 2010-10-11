@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-09-26}
+  s.date = %q{2010-10-10}
   s.description = %q{Ruby FFI bindings for the libexif library.}
   s.email = %q{postmodern.mod3@gmail.com}
   s.extra_rdoc_files = [
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".gitignore",
+    ".rspec",
     ".specopts",
     ".yardopts",
     "ChangeLog.md",
@@ -35,6 +36,8 @@ Gem::Specification.new do |s|
     "lib/ffi/exif/entry.rb",
     "lib/ffi/exif/exif.rb",
     "lib/ffi/exif/loader.rb",
+    "lib/ffi/exif/maker_note.rb",
+    "lib/ffi/exif/maker_note_tag.rb",
     "lib/ffi/exif/rational.rb",
     "lib/ffi/exif/srational.rb",
     "lib/ffi/exif/types.rb",
@@ -61,18 +64,18 @@ Gem::Specification.new do |s|
       s.add_runtime_dependency(%q<ffi>, ["~> 0.6.0"])
       s.add_development_dependency(%q<rake>, ["~> 0.8.7"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.0.pre"])
-      s.add_development_dependency(%q<rspec>, ["~> 1.3.0"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.0.0"])
     else
       s.add_dependency(%q<ffi>, ["~> 0.6.0"])
       s.add_dependency(%q<rake>, ["~> 0.8.7"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.0.pre"])
-      s.add_dependency(%q<rspec>, ["~> 1.3.0"])
+      s.add_dependency(%q<rspec>, ["~> 2.0.0"])
     end
   else
     s.add_dependency(%q<ffi>, ["~> 0.6.0"])
     s.add_dependency(%q<rake>, ["~> 0.8.7"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.0.pre"])
-    s.add_dependency(%q<rspec>, ["~> 1.3.0"])
+    s.add_dependency(%q<rspec>, ["~> 2.0.0"])
   end
 end
 
