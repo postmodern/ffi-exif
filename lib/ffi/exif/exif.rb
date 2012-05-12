@@ -8,7 +8,7 @@ module FFI
   module EXIF
     extend FFI::Library
 
-    ffi_lib 'exif'
+    ffi_lib ['exif', 'libexif.so.12']
 
     attach_function :exif_format_get_name, [:exif_format], :string
     attach_function :exif_format_get_size, [:exif_format], :uchar
