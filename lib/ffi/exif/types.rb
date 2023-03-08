@@ -226,7 +226,7 @@ module FFI
       :corrupt_data
     ]
 
-    callback :exif_log_func, [:pointer, :exif_log_code, :pointer, :pointer, :varargs, :pointer], :void
+    callback :exif_log_func, [:pointer, :exif_log_code, :pointer, :pointer, :pointer, :pointer], :void
 
     callback :exif_mem_alloc_func, [:exif_long], :pointer
     callback :exif_mem_realloc_func, [:pointer, :exif_long], :pointer
