@@ -1,0 +1,22 @@
+name: ffi-exif
+summary: FFI bindings for libexif
+description: Ruby FFI bindings for the libexif library.
+license: MIT
+authors: Postmodern
+email: postmodern.mod3@gmail.com
+homepage: https://github.com/postmodern/ffi-exif#readme
+has_yard: true
+
+metadata:
+  documentation_uri: https://rubydoc.info/gems/ffi-exif
+  source_code_uri:   https://github.com/postmodern/ffi-exif
+  bug_tracker_uri:   https://github.com/postmodern/ffi-exif/issues
+  changelog_uri:     https://github.com/postmodern/ffi-exif/blob/master/ChangeLog.md
+
+requirements: libexif >= 0.6.0
+
+dependencies:
+  ffi: ~> 1.0
+
+development_dependencies:
+  bundler: ~> 2.0
